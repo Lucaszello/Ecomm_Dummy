@@ -12,7 +12,7 @@ import { Pagination } from "swiper";
 import './Detail.css'
 import { useMediaQuery } from "@mantine/hooks";
 //createStyles
-const useStyles = createStyles((theme) => ({
+const useStyles = createStyles(() => ({
   imgLink: {
     transition: "0.3s",
     width: "100%",
@@ -35,10 +35,9 @@ const smallerThan = useMediaQuery("(max-width : 64em)")
   const { classes } = useStyles();
 
   //call CartStore
-  const [addToCart, quantity, products, removeToCart,favCart,favListClick,remoFavClick] = CartStore(
+  const [addToCart, products, removeToCart,favCart,favListClick,remoFavClick] = CartStore(
     (state: any) => [
       state.addToCart,
-      state.quantity,
       state.products,
       state.removeToCart,
       state.favCart,
@@ -62,7 +61,7 @@ const smallerThan = useMediaQuery("(max-width : 64em)")
   if (isLoading) {
     return (
       <Grid>
-        {[1, 2, 3, 4].map((item) => (
+        {[1, 2, 3, 4].map(() => (
           <>
             <Grid.Col key={Date.now( )} xs={12} sm={6} md={4} lg={3}>
               <Skeleton mt={30} w={300} h={220} />

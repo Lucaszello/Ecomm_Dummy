@@ -17,6 +17,7 @@
     "@mantine/hooks": "^6.0.13",
     "@tanstack/react-query": "^4.29.12",
     "@tanstack/react-query-devtools": "^4.29.12",
+    "@types/swiper": "^6.0.0",
     "axios": "^1.4.0",
     "cookies-js": "^1.2.3",
     "framer-motion": "^10.12.16",

@@ -29,7 +29,7 @@ export interface CartStoreProp {
 
 export const CartStore = create(
   persist(
-    (set, get) => ({
+    (set) => ({
       products: [],
       favCart : [],
       addToCart: (product: productProp) =>

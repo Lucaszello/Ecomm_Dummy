@@ -13,7 +13,7 @@ const ShowRoomProduct = ({
   favListClick,
   remoFavClick,
 }: any) => {
-  const [fav, setFav] = useState<boolean>(false);
+  const [fav] = useState<boolean>(false);
 
   console.log(favCart);
 

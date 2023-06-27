@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { fetchSearch } from "../../api/fetchStore";
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
@@ -20,10 +19,9 @@ const Search = () => {
   //smallerThan
   const smallerThan = useMediaQuery("(max-width : 64em)")
 
-  const [addToCart, quantity, products, removeToCart,favCart,favListClick,remoFavClick] = CartStore(
+  const [addToCart, products, removeToCart,favCart,favListClick,remoFavClick] = CartStore(
     (state: any) => [
       state.addToCart,
-      state.quantity,
       state.products,
       state.removeToCart,
       state.favCart,

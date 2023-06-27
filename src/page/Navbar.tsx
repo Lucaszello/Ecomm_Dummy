@@ -73,7 +73,7 @@ const Navbar = () => {
     }
   
 
-  const id = useEffect(() => {
+   useEffect(() => {
     if (pathname === "/") {
       setActive("home");
     } else {
@@ -221,7 +221,7 @@ const Navbar = () => {
                 radius={8}
                 px={10}
                 onKeyUp={SearchHandler}
-                  styles={(theme) => ({
+                  styles={() => ({
                     input: {
                       "&:focus-within": {
                        borderColor : 'transparent'

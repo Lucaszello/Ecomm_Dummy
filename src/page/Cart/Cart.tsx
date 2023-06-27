@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 import { useMediaQuery } from "@mantine/hooks";
 const Cart = () => {
   const smallerThan = useMediaQuery("(max-width : 48em)")
-  const [products, totalPrice, addToClick, removeToClick, deleteToClick] =
+  const [products, addToClick, removeToClick, deleteToClick] =
     CartStore((state: any) => [
       state.products,
       state.totalPrice,
